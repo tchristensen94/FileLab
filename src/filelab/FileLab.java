@@ -72,9 +72,10 @@ public class FileLab {
                         System.out.println("Address: " + line);
                         break;
                     case 3:
-                        System.out.println("City: " + line.split(" ")[0].replace(",", ""));
-                        System.out.println("State: " + line.split(" ")[1]);
-                        System.out.println("Zip: " + line.split(" ")[2]);
+                        String[] split = line.split(",");
+                        System.out.println("City: " + split[0].replace(",", ""));
+                        System.out.println("State: " + split[1].split(" ")[1]);
+                        System.out.println("Zip: " + split[1].split(" ")[2]);
                         break;
                 }
                 if(count >= 3) {
